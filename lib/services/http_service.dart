@@ -75,10 +75,10 @@ class HttpService{
     return map;
   }
 
-  static Map extractMapFromString(String data){
+  static String extractMapFromString(String data){
     if(data == '' || data == null){
-      return {};
+      return '';
     }
-    return json.decode(data);
+    return json.encode(data);
   }
 }
